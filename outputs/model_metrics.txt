@@ -1,0 +1,21 @@
+TF-IDF (1-2 grams, min_df=2) + balanced Logistic Regression
+80/20 stratified split; random_state=42; duplicate SMS rows removed before split.
+Test size: 1034
+Accuracy: 0.9836
+Spam precision: 0.9385
+Spam recall: 0.9313
+Spam F1: 0.9349
+
+              precision    recall  f1-score   support
+
+         ham     0.9900    0.9911    0.9906       903
+        spam     0.9385    0.9313    0.9349       131
+
+    accuracy                         0.9836      1034
+   macro avg     0.9643    0.9612    0.9627      1034
+weighted avg     0.9835    0.9836    0.9835      1034
+
+Confusion matrix labels [ham,spam]:
+[[895   8]
+ [  9 122]]
+Limitation: SMS language shifts over time; dataset is historical and text-only.
